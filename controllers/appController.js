@@ -1,4 +1,4 @@
-const { Thought, User } = require('../models');
+const { Thought, User, Reaction } = require('../models');
 
 module.exports = {
   // Function to get all of the applications by invoking the find() method with no arguments.
@@ -88,7 +88,7 @@ module.exports = {
       { runValidators: true, new: true }
     )
       .then((thought) =>
-        !application
+        !thought
           ? res.status(404).json({ message: 'No thought with this id!' })
           : res.json(thought)
       )

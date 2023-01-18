@@ -20,7 +20,7 @@ router
   .delete(deleteThought);
 
 // /api/applications/:applicationId/tags
-router.route('/:thoughtId/thoughts').post(addReaction);
+router.route('/:thoughtId/reactions').post(addReaction);
 
 // /api/applications/:applicationId/tags/:tagId
 router.route('/:thoughtsId/reactions/:reactionId').delete(removeReaction);
